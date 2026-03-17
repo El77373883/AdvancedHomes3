@@ -1,0 +1,48 @@
+# ============================================
+#     AdvancedHomes - Mensajes
+#     Plugin by soyadrianyt001
+# ============================================
+
+prefix: "&8[&6&lAdvancedHomes&8] &r"
+
+messages:
+  # Hogares
+  home-set: "&aHogar &e{home} &aestablecido correctamente."
+  home-deleted: "&cHogar &e{home} &celiminado correctamente."
+  home-teleporting: "&aTeletransportandote a &e{home}&a en &6{delay} &asegundos..."
+  home-teleported: "&aTeletransportado a &e{home}&a correctamente."
+  home-not-found: "&cNo tienes ningun hogar llamado &e{home}&c."
+  home-already-exists: "&cYa tienes un hogar con el nombre &e{home}&c."
+  home-limit-reached: "&cHas alcanzado el limite de hogares &e({limit})&c."
+  home-list-header: "&6&l--- Tus Hogares ({count}/{limit}) ---"
+  home-list-entry: "&8» &e{home} &7- &f{world} &7({x}, {y}, {z})"
+  home-list-empty: "&cNo tienes ningún hogar establecido."
+  home-name-invalid: "&cEl nombre del hogar solo puede contener letras, numeros y guiones bajos."
+  home-name-too-long: "&cEl nombre del hogar no puede tener mas de 16 caracteres."
+
+  # Teleport
+  teleport-cancelled-move: "&cTeletransporte cancelado por moverte."
+  teleport-cancelled-damage: "&cTeletransporte cancelado por recibir daño."
+  teleport-cooldown: "&cDebes esperar &e{time} &csegundos antes de teletransportarte."
+  teleport-blocked-world: "&cNo puedes teletransportarte en este mundo."
+
+  # Admin
+  plugin-reloaded: "&aPlugin recargado correctamente."
+  player-not-found: "&cJugador &e{player} &cno encontrado."
+  homes-reset: "&aHogares de &e{player} &aresetados correctamente."
+  no-permission: "&cNo tienes permiso para hacer esto."
+  player-only: "&cEste comando solo puede ser ejecutado por jugadores."
+
+  # Otros
+  usage-home: "&cUso: /home [nombre]"
+  usage-sethome: "&cUso: /sethome [nombre]"
+  usage-delhome: "&cUso: /delhome <nombre>"
+  usage-homes: "&cUso: /homes [jugador]"
+  usage-ah: "&cUso: /advancedhomes <reload|info|reset <jugador>>"
+
+  # Info
+  info-header: "&8&m----&r &6&lAdvancedHomes &8&m----"
+  info-version: "&7Version: &e{version}"
+  info-author: "&7Autor: &esoyadrianyt001"
+  info-homes: "&7Tus hogares: &e{count}&7/&e{limit}"
+  info-footer: "&8&m----------------------"
