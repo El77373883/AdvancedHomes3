@@ -1,0 +1,52 @@
+# ============================================
+#        AdvancedHomes - Configuracion
+#        Plugin by soyadrianyt001
+#        Version: 1.0.0
+# ============================================
+
+general:
+  language: es
+  default-homes-limit: 5
+  homes-limit:
+    vip: 10
+    premium: 25
+    unlimited: -1
+
+teleport:
+  delay: 3
+  cancel-on-move: true
+  cancel-on-damage: true
+  cooldown: 5
+  allow-cross-world: true
+  blocked-worlds: []
+
+gui:
+  title: "&8⌂ &6&lAdvancedHomes &8⌂"
+  rows: 6
+  home-item: CYAN_BED
+  fill-empty: true
+  fill-material: BLACK_STAINED_GLASS_PANE
+
+sounds:
+  enabled: true
+  teleport: ENTITY_ENDERMAN_TELEPORT
+  set-home: BLOCK_ENCHANTMENT_TABLE_USE
+  delete-home: ENTITY_ITEM_BREAK
+  error: ENTITY_VILLAGER_NO
+  open-gui: BLOCK_CHEST_OPEN
+  countdown: BLOCK_NOTE_BLOCK_PLING
+
+particles:
+  enabled: true
+  teleport-effect: PORTAL
+
+database:
+  # Tipo: YAML o MYSQL
+  type: YAML
+  mysql:
+    host: localhost
+    port: 3306
+    database: advancedhomes
+    username: root
+    password: password
+    pool-size: 10
