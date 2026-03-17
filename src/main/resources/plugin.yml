@@ -2,82 +2,58 @@ name: AdvancedHomes
 version: '${project.version}'
 main: com.soyadrianyt001.advancedhomes.AdvancedHomes
 api-version: '1.21'
-description: Premium Advanced Homes Plugin
+description: Premium Advanced Homes Plugin - by soyadrianyt001
 author: soyadrianyt001
-website: https://github.com/soyadrianyt001
-
 softdepend:
   - PlaceholderAPI
 
 commands:
-  home:
-    description: Teleport to your home
-    usage: /home [name]
-    aliases: [h]
-  sethome:
-    description: Set a home at your location
-    usage: /sethome [name]
-    aliases: [sh]
-  delhome:
-    description: Delete a home
-    usage: /delhome <name>
-    aliases: [deletehome, removehome]
-  homes:
-    description: List all your homes
-    usage: /homes [player]
-    aliases: [homelist]
-  homegui:
-    description: Open the homes GUI
-    usage: /homegui [player]
-    aliases: [hgui]
-  advancedhomes:
-    description: Main plugin command
-    usage: /advancedhomes <reload|info|reset>
-    aliases: [ah, ahomes]
+  ahome:
+    description: Teleporta a tu hogar
+    usage: /ahome [nombre]
+    aliases: [ah]
+  ahome create:
+    description: Crea un hogar
+    usage: /ahome create [nombre]
+  ahome remove:
+    description: Elimina un hogar
+    usage: /ahome remove <nombre>
+  ahome list:
+    description: Lista tus hogares
+    usage: /ahome list
+  ahome gui:
+    description: Abre el menu
+    usage: /ahome gui
+  ahomes:
+    description: Comando admin
+    usage: /ahomes <reload|info|reset>
 
 permissions:
   advancedhomes.home:
-    description: Allows using /home
     default: true
   advancedhomes.sethome:
-    description: Allows using /sethome
     default: true
   advancedhomes.delhome:
-    description: Allows using /delhome
     default: true
   advancedhomes.homes:
-    description: Allows using /homes
     default: true
   advancedhomes.gui:
-    description: Allows using /homegui
     default: true
   advancedhomes.admin:
-    description: Full admin access
     default: op
   advancedhomes.homes.others:
-    description: View other players homes
     default: op
   advancedhomes.bypass.cooldown:
-    description: Bypass teleport cooldown
     default: op
   advancedhomes.bypass.limit:
-    description: Bypass homes limit
     default: op
   advancedhomes.limit.vip:
-    description: VIP home limit (10 homes)
     default: false
   advancedhomes.limit.premium:
-    description: Premium home limit (25 homes)
     default: false
   advancedhomes.limit.unlimited:
-    description: Unlimited homes
     default: false
   advancedhomes.reload:
-    description: Reload the plugin
-    default: op
-  advancedhomes.info:
-    description: View plugin info
     default: op
   advancedhomes.reset:
-    description: Reset player homes
     default: op
