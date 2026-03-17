@@ -1,6 +1,7 @@
 package com.soyadrianyt001.advancedhomes;
 
-import com.soyadrianyt001.advancedhomes.commands.*;
+import com.soyadrianyt001.advancedhomes.commands.AHomeCommand;
+import com.soyadrianyt001.advancedhomes.commands.AHomesCommand;
 import com.soyadrianyt001.advancedhomes.gui.HomeGUI;
 import com.soyadrianyt001.advancedhomes.listeners.GUIListener;
 import com.soyadrianyt001.advancedhomes.listeners.PlayerListener;
@@ -44,19 +45,13 @@ public class AdvancedHomes extends JavaPlugin {
     }
 
     private void registerCommands() {
-        getCommand("home").setExecutor(new HomeCommand(this));
-        getCommand("home").setTabCompleter(new HomeCommand(this));
-        getCommand("sethome").setExecutor(new SetHomeCommand(this));
-        getCommand("sethome").setTabCompleter(new SetHomeCommand(this));
-        getCommand("delhome").setExecutor(new DelHomeCommand(this));
-        getCommand("delhome").setTabCompleter(new DelHomeCommand(this));
-        getCommand("homes").setExecutor(new HomesCommand(this));
-        getCommand("homes").setTabCompleter(new HomesCommand(this));
-        getCommand("homegui").setExecutor(new HomeGUICommand(this));
-        getCommand("homegui").setTabCompleter(new HomeGUICommand(this));
-        AdvancedHomesCommand ahCmd = new AdvancedHomesCommand(this);
-        getCommand("advancedhomes").setExecutor(ahCmd);
-        getCommand("advancedhomes").setTabCompleter(ahCmd);
+        AHomeCommand aHomeCmd = new AHomeCommand(this);
+        getCommand("ahome").setExecutor(aHomeCmd);
+        getCommand("ahome").setTabCompleter(aHomeCmd);
+
+        AHomesCommand aHomesCmd = new AHomesCommand(this);
+        getCommand("ahomes").setExecutor(aHomesCmd);
+        getCommand("ahomes").setTabCompleter(aHomesCmd);
     }
 
     private void registerListeners() {
