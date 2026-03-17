@@ -1,0 +1,40 @@
+name: Build AdvancedHomes
+
+on:
+  push:
+    branches: [ main, master ]
+  pull_request:
+    branches: [ main, master ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout codigo
+        uses: actions/checkout@v4
+
+      - name: Configurar Java 21
+        uses: actions/setup-java@v4
+        with:
+          java-version: '21'
+          distribution: 'temurin'
+          cache: maven
+
+      - name: Compilar plugin
+        run: mvn clean package -B
+
+      - name: Subir AdvancedHomes.jar
+        uses: actions/upload-artifact@v4
+        with:
+          name: AdvancedHomes-${{ github.run_number }}
+          path: target/AdvancedHomes-*.jar
+          retention-days: 30
+
+      - name: Build exitoso
+        run: |
+          echo "======================================"
+          echo "  AdvancedHomes compilado con exito!"
+          echo "  Hecho por soyadrianyt001"
+          echo "======================================"
+          ls -lh target/*.jar
